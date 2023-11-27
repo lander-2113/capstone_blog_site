@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="main">
+        <nav>
+            <ul>
+                <li>Blogs</li>
+                <li>
+                    <form action="/write" method="get">
+                        <input type="submit" value="write">
+                    </form>
+                </li>
+    
+                <li>
+                    <form action="/todo" method="get">
+                        <input type="submit" value="TO-DO list">
+                    </form>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="container2">
+            <% if(locals.blog_list && blog_list.length > 0) {%>
+    
+                <ul>
+                    <%for(let i=0; i < blog_list.length; i++){%>
+                        <li >
+                            <h1><%=blog_list[i]["title"]%></h1>
+                            <h4><%= blog_list[i]["date"] %></h4>
+                            <p><%= blog_list[i]["content"].slice(0, 300) %>
+                                
+                                <form action="/read" method="post">
+                                    <input name="idx" style="display: none;" type="text" value=<%=String(i)%>>
+                                    <input type="submit" value="Read More">
+                                </form>
+                                <form id="blog_edit_form" action="/edit" method="post">
+                                    <input type="text" style="display: none;" name="idx" value=<%=String(i)%>>
+                                    <input type="submit" value="Edit">
+                                </form>
+                                <form id="blog_delete_form" action="/delete" method="post">
+                                    <input type="text" style="display: none;" name="idx" value=<%=String(i)%>>
+                                    <input type="submit" value="Delete">
+                                </form>
+                            </p>
+                            <br>
+                        </li>   
+                    <%}%>
+                </ul>
+        
+            <%} else {%>
+                <h1>Write some...</h1>
+            <%}%>
+        
+        </div>
+
+        <footer>
+
+            <span>Rohit Sahu &copy <%=new Date().getYear() + 1900%></span>
+    
+        </footer>
+    </div>
+    
+    
+    
+    <script src="/scripts/script_blog.js"></script>
+
+    
+</body>
+</html>

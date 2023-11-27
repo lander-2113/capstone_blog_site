@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style_write_blog.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="main">
+        <h1>Write a BLOG!</h1>
+        <form action="/written" method="post">
+            <!-- <input style="display: none;" type="text" name="date" value=> -->
+            <fieldset>
+                <legend>Title</legend>
+                <input type="text" name="title" value="" placeholder="Add new title"> <br>
+    
+            </fieldset>
+            <fieldset>
+                <legend>Content</legend>
+                <textarea id="message" name="content" rows="50" cols="50" placeholder="Work your magic through words..."></textarea><br>
+            </fieldset>
+            <input type="submit" value="Submit">
+        </form>
+
+
+        <footer>
+
+            <span>Rohit Sahu &copy <%=new Date().getYear() + 1900%></span>
+    
+        </footer>
+    </div>
+    
+
+    
+</body>
+</html>

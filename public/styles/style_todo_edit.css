@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background-color: grey;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    min-height: 100vh;
+    background-color: white;
+    margin: 0 auto;
+}
+.main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.main form textarea {
+    margin: 10px 0;
+    width: 70%;
+    text-align: center;
+    font-size: 25x;
+
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: -2px 2px 2px 2px black;
+}
+
+.main form textarea:focus {
+    border: 1px solid black;
+    font-size: 30px;
+}
+
+.main form input {
+    all: unset;
+    border: 1px solid black;
+    background-color: orchid;
+    font-size: 25px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: -1px 1px 1px 1px black;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    height: 30vh;
+    background-color: black;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+    
+}
+footer span {
+    color: white;
+    /* margin-top: 50%; */
+}

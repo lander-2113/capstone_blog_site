@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style_todo_edit.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>Edit task</h1>
+        <form action="/editedTask" method="post">
+            <input style="display: none;" type="text" name="idx" id="" value=<%=String(idx)%>>
+            
+            <textarea name="task" id="edited_task" cols="30" rows="10"><%=todo_list[idx].task%></textarea>
+            <input type="submit" value="Save">
+        </form>
+
+        
+    </div>
+
+    <footer>
+
+        <span>Rohit Sahu &copy <%=new Date().getYear() + 1900%></span>
+
+    </footer>
+    
+    
+
+    
+</body>
+</html>

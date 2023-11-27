@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/read_blog.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- object names, blog -->
+    <div class="main">
+        
+        <h1 class="item1"><%=blog["title"]%></h1>
+        <h3 class="item2"><%=blog["date"]%></h3>
+        <p class="item3"><%=blog["content"]%></p>
+        
+
+
+        <footer>
+
+            <span>Rohit Sahu &copy <%=new Date().getYear() + 1900%></span>
+    
+        </footer>
+    </div>
+    
+    
+
+</body>
+</html>

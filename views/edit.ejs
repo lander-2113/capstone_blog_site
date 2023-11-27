@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/stedit_blog.css">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    
+    <!-- have a blog title, date,  -->
+    <div class="main">
+        <h1>Edit your BLOG!</h1>
+        <% if(locals.blog){%>
+            <form id="blog_edited_form" action="/edited" method="post">
+                <input style="display: none;" type="text" name="idx" value="<%= idx %>">
+                <fieldset>
+                    <legend>Title</legend>
+                    <input type="text" name="title" value="<%= blog["title"] %> "> <br>
+    
+                </fieldset>
+                <fieldset>
+                    <legend>Content</legend>
+                    <textarea id="message" name="content" rows="50" cols="50"><%=blog["content"]%></textarea><br>
+                </fieldset>
+    
+                
+                <input type="submit" value="Submit">
+            </form>
+        <%} else {%>
+            <h1>Error.</h1>
+        <%}%>
+    </div>
+    
+    <script src="/scripts/script_blog.js"></script>
+</body>
+</html>

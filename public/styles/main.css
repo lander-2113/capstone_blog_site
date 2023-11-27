@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: grey;
+}
+nav {
+    background-color: black;
+    color: white;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    width: 90%;
+}
+
+nav ul li:first-child{
+    font-size: 40px;
+    margin-right: 70%;
+}
+
+
+
+nav ul li form input {
+    all: unset;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+nav ul li form input:hover {
+    color: orange;
+}
+
+.main {
+    width: 90%;
+    background-color: white;
+    margin: 0 auto;
+    /* height: 100vh; */
+    
+}
+.main .container2 {
+    padding-bottom: 50px;
+}
+
+
+.main .container2 ul {
+    list-style-type: none;
+    margin: 50px;
+}
+
+.main .container2 ul li form {
+    display: inline;
+}
+
+.main .container2 ul li p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    /* word-break: break-all  */
+    overflow: hidden;
+}
+
+.main .container2 ul li form input{
+    all: unset;
+    cursor: pointer;
+    margin-right: 10px;
+    color: blue;
+    font-size: 20px;
+}
+.main .container2 ul li form input:hover{
+    color: orange;
+}
+
+.main .container2 ul li h4 {
+    margin-top: 5px;
+}
+
+.main .container2 ul li {
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px black;
+   
+    background: linear-gradient(orange, white);
+}
+
+/* footer  */
+footer {
+    width: 100%;
+    height: 30vh;
+    background-color: black;
+    /* text-align: center; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer span {
+    color: white;
+    /* margin-top: 50%; */
+}

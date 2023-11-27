@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/style_todo.css">
+</head>
+<body>
+    <!-- enctype="multipart/form-data" content  -->
+
+    <!-- /task -->
+    <div class="main">
+        <form id="task_form" action="/task" method="post">
+            <textarea id="task_desc" name="task" rows="20" cols="30" placeholder="What task you want to do?" required></textarea>
+            <input type="submit" value="Add task">
+        </form>
+    
+        <hr>
+
+        <%if(locals.todo && todo.length > 0) {%>
+            <ul>
+                <%for(let i = 0; i < todo.length; i++) {%>
+                    <li>
+                        <p><%=todo[i]["task"]%></p>
+                        <p>Date : <%=todo[i]["date"]%></p>
+                        <form action="/editTask" method="post">
+                            <input type="text" style="display: none;" name="idx" value=<%=String(i)%>>
+                            <input type="submit" value="Edit">
+                        </form>
+                        <form action="/deleteTask" method="post">
+                            <input type="text" style="display: none;" name="idx" value=<%=String(i)%>>
+                            <input type="submit" value="Delete">
+                        </form>
+                    </li>
+                <%}%>
+            </ul>
+        <%} else {%>
+            <h1>Add a task...</h1>
+        <%}%>
+    
+    </div>
+    
+    
+
+    <script src="/scripts/script.js"></script>
+    <footer>
+
+        <span>Rohit Sahu &copy <%=new Date().getYear() + 1900%></span>
+
+    </footer>
+</body>
+</html>
